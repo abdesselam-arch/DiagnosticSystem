@@ -2,8 +2,8 @@
   "collection_id": "c495bc08-4776-4d96-9267-d8f828e72b98",
   "name": "Diagnostic Collection",
   "description": "",
-  "created_date": "2025-05-13T11:07:24.730976",
-  "last_modified_date": "2025-05-13T11:07:24.730976",
+  "created_date": "2025-05-13T18:16:26.340932",
+  "last_modified_date": "2025-05-13T18:16:26.340932",
   "rules": {
     "ba143655-7a4b-483f-a08b-b2095c8049d4": {
       "rule_id": "ba143655-7a4b-483f-a08b-b2095c8049d4",
@@ -47,8 +47,8 @@
       ],
       "created_date": "2025-05-13T10:58:38.954522",
       "last_modified_date": "2025-05-13T10:58:38.954522",
-      "last_used": "2025-05-13T11:07:24.718458",
-      "use_count": 2,
+      "last_used": "2025-05-13T13:57:57.735821",
+      "use_count": 5,
       "metadata": {
         "effectiveness": "Complete Solution",
         "severity": "High",
@@ -117,8 +117,8 @@
       ],
       "created_date": "2025-05-13T11:02:44.965496",
       "last_modified_date": "2025-05-13T11:02:44.965496",
-      "last_used": null,
-      "use_count": 0,
+      "last_used": "2025-05-13T12:18:38.811872",
+      "use_count": 3,
       "metadata": {},
       "pathway_data": {
         "nodes": {
@@ -225,6 +225,134 @@
           ]
         ]
       }
+    },
+    "66b8f2e6-0076-40bc-a850-efa55ae7d7f4": {
+      "rule_id": "66b8f2e6-0076-40bc-a850-efa55ae7d7f4",
+      "text": "IF Weight < tolerance Weight < tolerance,\nTHEN\n  1. Adjust ff to 2\n  2. Replace die",
+      "name": "",
+      "description": "",
+      "is_complex": true,
+      "conditions": [
+        {
+          "param": "Weight",
+          "operator": "<",
+          "value": "tolerance",
+          "connector": "AND"
+        },
+        {
+          "param": "Weight",
+          "operator": "<",
+          "value": "tolerance",
+          "connector": "AND"
+        }
+      ],
+      "actions": [
+        {
+          "type": "Adjust",
+          "target": "ff",
+          "value": "2",
+          "sequence": 1
+        },
+        {
+          "type": "Replace",
+          "target": "die",
+          "value": "",
+          "sequence": 2
+        }
+      ],
+      "created_date": "2025-05-13T12:14:44.854204",
+      "last_modified_date": "2025-05-13T12:14:44.854204",
+      "last_used": "2025-05-13T12:18:19.192397",
+      "use_count": 1,
+      "metadata": {
+        "name": "Weight fix",
+        "creation_date": "2025-05-13T12:14:44.854204"
+      },
+      "pathway_data": null
+    },
+    "2366d236-2c93-44bb-b0e9-d994235016e2": {
+      "rule_id": "2366d236-2c93-44bb-b0e9-d994235016e2",
+      "text": "IF problem is 'Material Handling: A' AND A shows B,\nTHEN\n  1. D",
+      "name": "",
+      "description": "",
+      "is_complex": true,
+      "conditions": [
+        {
+          "param": "problem is 'Material Handling: A'",
+          "operator": "=",
+          "value": "true",
+          "connector": "AND"
+        },
+        {
+          "param": "A shows B",
+          "operator": "=",
+          "value": "true",
+          "connector": ""
+        }
+      ],
+      "actions": [
+        {
+          "type": "Apply",
+          "target": "D",
+          "value": "",
+          "sequence": 1
+        }
+      ],
+      "created_date": "2025-05-13T15:14:59.975046",
+      "last_modified_date": "2025-05-13T15:14:59.975046",
+      "last_used": null,
+      "use_count": 0,
+      "metadata": {
+        "effectiveness": "Complete Solution",
+        "severity": "Medium",
+        "problem_type": "Material Handling",
+        "capture_date": "2025-05-13T15:14:59.975046"
+      },
+      "pathway_data": null
+    },
+    "d72fbc65-c8e7-439b-952a-fc5f2bbfebd1": {
+      "rule_id": "d72fbc65-c8e7-439b-952a-fc5f2bbfebd1",
+      "text": "IF Weight < control limit AND powder fill != recommended level,\nTHEN\n  1. Replace the powder used\n  2. Restart press machine",
+      "name": "",
+      "description": "",
+      "is_complex": true,
+      "conditions": [
+        {
+          "param": "Weight",
+          "operator": "<",
+          "value": "control limit",
+          "connector": "AND"
+        },
+        {
+          "param": "powder fill",
+          "operator": "!=",
+          "value": "recommended level",
+          "connector": ""
+        }
+      ],
+      "actions": [
+        {
+          "type": "Replace",
+          "target": "the powder used",
+          "value": "",
+          "sequence": 1
+        },
+        {
+          "type": "Restart",
+          "target": "press machine",
+          "value": "",
+          "sequence": 2
+        }
+      ],
+      "created_date": "2025-05-13T18:16:26.340932",
+      "last_modified_date": "2025-05-13T18:16:26.340932",
+      "last_used": "2025-05-13T18:16:26.326415",
+      "use_count": 1,
+      "metadata": {
+        "name": "Fixing weight",
+        "creation_date": "2025-05-13T18:16:15.301204"
+      },
+      "pathway_data": null
     }
   }
 }

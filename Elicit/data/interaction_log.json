@@ -68,5 +68,19 @@
     "rule_text": "IF problem is 'Quality Issue: QC is out of tolerance limits' AND Powder fill shows Powder fill is high AND UL position shows UL is too low,\nTHEN\n  1. change powder fill from 0.5 to 0.6\n  2. change UL position",
     "problem_description": "",
     "rule_type": "Capture"
+  },
+  {
+    "timestamp": "2025-05-13T18:16:26.326415",
+    "rule_id": 4,
+    "rule_text": "IF Weight < control limit AND powder fill != recommended level,\nTHEN\n  1. Replace the powder used\n  2. Restart press machine",
+    "problem_description": "",
+    "rule_type": "Rule"
+  },
+  {
+    "timestamp": "2025-05-13T18:16:29.004594",
+    "rule_id": 4,
+    "rule_text": "IF Weight < control limit AND powder fill != recommended level,\nTHEN\n  1. Replace the powder used\n  2. Restart press machine",
+    "problem_description": "",
+    "rule_type": "Rule"
   }
 ]

@@ -250,3 +250,32 @@ AttributeError: 'MainWindow' object has no attribute 'search_input'
 2025-05-13 15:30:47,518 - services.storage_service - INFO - Storage service initialized successfully
 2025-05-13 15:30:47,841 - ui.main_window - INFO - Main window initialized
 2025-05-13 15:30:47,974 - __main__ - INFO - Application started successfully
+2025-05-13 16:05:30,281 - __main__ - INFO - Environment setup complete
+2025-05-13 16:05:30,447 - services.storage_service - INFO - Loaded collection with 4 rules
+2025-05-13 16:05:30,447 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-13 16:05:30,799 - ui.main_window - INFO - Main window initialized
+2025-05-13 16:05:30,937 - __main__ - INFO - Application started successfully
+2025-05-13 16:06:43,819 - __main__ - INFO - Environment setup complete
+2025-05-13 16:06:43,970 - services.storage_service - INFO - Loaded collection with 4 rules
+2025-05-13 16:06:43,970 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-13 16:06:44,262 - ui.main_window - INFO - Main window initialized
+2025-05-13 16:06:44,414 - __main__ - INFO - Application started successfully
+2025-05-13 17:53:10,746 - __main__ - INFO - Environment setup complete
+2025-05-13 17:53:10,909 - services.storage_service - INFO - Loaded collection with 4 rules
+2025-05-13 17:53:10,920 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-13 17:53:11,282 - ui.main_window - INFO - Main window initialized
+2025-05-13 17:53:11,423 - __main__ - INFO - Application started successfully
+2025-05-13 18:13:32,464 - __main__ - INFO - Environment setup complete
+2025-05-13 18:13:32,627 - services.storage_service - INFO - Loaded collection with 4 rules
+2025-05-13 18:13:32,627 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-13 18:13:32,950 - ui.main_window - INFO - Main window initialized
+2025-05-13 18:13:33,083 - __main__ - INFO - Application started successfully
+2025-05-13 18:16:15,303 - services.storage_service - INFO - Created backup at c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_181615.json
+2025-05-13 18:16:15,305 - services.storage_service - INFO - Removed old backup: c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_110724.json
+2025-05-13 18:16:15,308 - services.storage_service - INFO - Saved collection with 5 rules
+2025-05-13 18:16:26,341 - services.storage_service - INFO - Created backup at c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_181626.json
+2025-05-13 18:16:26,343 - services.storage_service - INFO - Removed old backup: c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_110733.json
+2025-05-13 18:16:26,345 - services.storage_service - INFO - Saved collection with 5 rules
+2025-05-13 18:16:29,018 - services.storage_service - INFO - Created backup at c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_181629.json
+2025-05-13 18:16:29,019 - services.storage_service - INFO - Removed old backup: c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_110736.json
+2025-05-13 18:16:29,021 - services.storage_service - INFO - Saved collection with 5 rules

@@ -2,8 +2,8 @@
   "collection_id": "c495bc08-4776-4d96-9267-d8f828e72b98",
   "name": "Diagnostic Collection",
   "description": "",
-  "created_date": "2025-05-13T15:14:59.975046",
-  "last_modified_date": "2025-05-13T15:14:59.975046",
+  "created_date": "2025-05-13T18:16:29.016335",
+  "last_modified_date": "2025-05-13T18:16:29.016335",
   "rules": {
     "ba143655-7a4b-483f-a08b-b2095c8049d4": {
       "rule_id": "ba143655-7a4b-483f-a08b-b2095c8049d4",
@@ -307,6 +307,50 @@
         "severity": "Medium",
         "problem_type": "Material Handling",
         "capture_date": "2025-05-13T15:14:59.975046"
+      },
+      "pathway_data": null
+    },
+    "68d1db7c-644c-48b1-aa30-b0b5bf519345": {
+      "rule_id": "68d1db7c-644c-48b1-aa30-b0b5bf519345",
+      "text": "IF Weight < control limit AND powder fill != recommended level,\nTHEN\n  1. Replace the powder used\n  2. Restart press machine",
+      "name": "",
+      "description": "",
+      "is_complex": true,
+      "conditions": [
+        {
+          "param": "Weight",
+          "operator": "<",
+          "value": "control limit",
+          "connector": "AND"
+        },
+        {
+          "param": "powder fill",
+          "operator": "!=",
+          "value": "recommended level",
+          "connector": ""
+        }
+      ],
+      "actions": [
+        {
+          "type": "Replace",
+          "target": "the powder used",
+          "value": "",
+          "sequence": 1
+        },
+        {
+          "type": "Restart",
+          "target": "press machine",
+          "value": "",
+          "sequence": 2
+        }
+      ],
+      "created_date": "2025-05-13T18:16:29.016335",
+      "last_modified_date": "2025-05-13T18:16:29.016335",
+      "last_used": "2025-05-13T18:16:29.004594",
+      "use_count": 2,
+      "metadata": {
+        "name": "Fixing weight",
+        "creation_date": "2025-05-13T18:16:15.301204"
       },
       "pathway_data": null
     }
