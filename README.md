@@ -1,6 +1,6 @@
 # Diagnostic Elicitation Tool
 
-A PyQt5-based application for creating, managing, and visualizing diagnostic troubleshooting pathways and procedures for manufacturing and maintenance contexts.
+A application for creating, managing, and visualizing diagnostic troubleshooting pathways and procedures for manufacturing and maintenance contexts.
 
 ## Features
 

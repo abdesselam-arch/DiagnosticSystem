@@ -425,9 +425,8 @@ class MainWindow(QMainWindow):
         rule["use_count"] = rule.get("use_count", 0) + 1
         rule["last_used"] = datetime.now().isoformat()
         
-        # Log the application
-        problem_description = self.problem_input.toPlainText().strip()
-        self._log_rule_application(rule, problem_description)
+        # Log the application without problem description since it's no longer available
+        self._log_rule_application(rule)
         
         # Save rules
         self.storage_service.save_rules(self.rules)
@@ -436,8 +435,8 @@ class MainWindow(QMainWindow):
         self.load_rules_table()
         
         QMessageBox.information(self, "Rule Applied", 
-                               f"The diagnostic rule has been applied and logged.\n"
-                               f"Total times used: {rule['use_count']}")
+                              f"The diagnostic rule has been applied and logged.\n"
+                              f"Total times used: {rule['use_count']}")
     
     def _log_rule_application(self, rule, problem_description=""):
         """Log the application of a rule."""

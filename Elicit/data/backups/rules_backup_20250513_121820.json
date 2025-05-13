@@ -2,8 +2,8 @@
   "collection_id": "c495bc08-4776-4d96-9267-d8f828e72b98",
   "name": "Diagnostic Collection",
   "description": "",
-  "created_date": "2025-05-13T12:18:38.824784",
-  "last_modified_date": "2025-05-13T12:18:38.824784",
+  "created_date": "2025-05-13T12:18:19.206498",
+  "last_modified_date": "2025-05-13T12:18:19.206498",
   "rules": {
     "ba143655-7a4b-483f-a08b-b2095c8049d4": {
       "rule_id": "ba143655-7a4b-483f-a08b-b2095c8049d4",
@@ -117,8 +117,8 @@
       ],
       "created_date": "2025-05-13T11:02:44.965496",
       "last_modified_date": "2025-05-13T11:02:44.965496",
-      "last_used": "2025-05-13T12:18:38.811872",
-      "use_count": 3,
+      "last_used": "2025-05-13T11:07:33.414508",
+      "use_count": 1,
       "metadata": {},
       "pathway_data": {
         "nodes": {

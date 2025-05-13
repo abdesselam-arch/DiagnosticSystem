@@ -154,3 +154,53 @@ AttributeError: 'MainWindow' object has no attribute 'search_input'
 2025-05-13 11:35:47,144 - services.storage_service - INFO - Storage service initialized successfully
 2025-05-13 11:35:47,419 - ui.main_window - INFO - Main window initialized
 2025-05-13 11:35:47,525 - __main__ - INFO - Application started successfully
+2025-05-13 11:58:23,650 - __main__ - INFO - Environment setup complete
+2025-05-13 11:58:23,817 - services.storage_service - INFO - Loaded collection with 2 rules
+2025-05-13 11:58:23,818 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-13 11:58:24,135 - ui.main_window - INFO - Main window initialized
+2025-05-13 11:58:24,275 - __main__ - INFO - Application started successfully
+2025-05-13 12:12:47,537 - __main__ - INFO - Environment setup complete
+2025-05-13 12:12:47,706 - services.storage_service - INFO - Loaded collection with 2 rules
+2025-05-13 12:12:47,706 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-13 12:12:48,056 - ui.main_window - INFO - Main window initialized
+2025-05-13 12:12:48,189 - __main__ - INFO - Application started successfully
+2025-05-13 12:14:44,856 - services.storage_service - INFO - Created backup at c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_121444.json
+2025-05-13 12:14:44,858 - services.storage_service - INFO - Removed old backup: c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_103034.json
+2025-05-13 12:14:44,860 - services.storage_service - INFO - Saved collection with 3 rules
+2025-05-13 12:15:32,553 - __main__ - INFO - Environment setup complete
+2025-05-13 12:15:32,704 - services.storage_service - INFO - Loaded collection with 3 rules
+2025-05-13 12:15:32,704 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-13 12:15:33,007 - ui.main_window - INFO - Main window initialized
+2025-05-13 12:15:33,155 - __main__ - INFO - Application started successfully
+2025-05-13 12:15:41,027 - __main__ - INFO - Environment setup complete
+2025-05-13 12:15:41,174 - services.storage_service - INFO - Loaded collection with 3 rules
+2025-05-13 12:15:41,174 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-13 12:15:41,456 - ui.main_window - INFO - Main window initialized
+2025-05-13 12:15:41,588 - __main__ - INFO - Application started successfully
+2025-05-13 12:15:46,980 - __main__ - INFO - Environment setup complete
+2025-05-13 12:15:47,131 - services.storage_service - INFO - Loaded collection with 3 rules
+2025-05-13 12:15:47,131 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-13 12:15:47,411 - ui.main_window - INFO - Main window initialized
+2025-05-13 12:15:47,532 - __main__ - INFO - Application started successfully
+2025-05-13 12:16:29,977 - __main__ - INFO - Environment setup complete
+2025-05-13 12:16:30,155 - services.storage_service - INFO - Loaded collection with 3 rules
+2025-05-13 12:16:30,155 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-13 12:16:30,441 - ui.main_window - INFO - Main window initialized
+2025-05-13 12:16:30,589 - __main__ - INFO - Application started successfully
+2025-05-13 12:18:13,388 - __main__ - INFO - Environment setup complete
+2025-05-13 12:18:13,549 - services.storage_service - INFO - Loaded collection with 3 rules
+2025-05-13 12:18:13,549 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-13 12:18:13,821 - ui.main_window - INFO - Main window initialized
+2025-05-13 12:18:13,950 - __main__ - INFO - Application started successfully
+2025-05-13 12:18:15,202 - services.storage_service - INFO - Created backup at c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_121815.json
+2025-05-13 12:18:15,203 - services.storage_service - INFO - Removed old backup: c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_103349.json
+2025-05-13 12:18:15,205 - services.storage_service - INFO - Saved collection with 3 rules
+2025-05-13 12:18:19,207 - services.storage_service - INFO - Created backup at c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_121819.json
+2025-05-13 12:18:19,209 - services.storage_service - INFO - Removed old backup: c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_105615.json
+2025-05-13 12:18:19,211 - services.storage_service - INFO - Saved collection with 3 rules
+2025-05-13 12:18:20,833 - services.storage_service - INFO - Created backup at c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_121820.json
+2025-05-13 12:18:20,834 - services.storage_service - INFO - Removed old backup: c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_105618.json
+2025-05-13 12:18:20,836 - services.storage_service - INFO - Saved collection with 3 rules
+2025-05-13 12:18:38,826 - services.storage_service - INFO - Created backup at c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_121838.json
+2025-05-13 12:18:38,828 - services.storage_service - INFO - Removed old backup: c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_105838.json
+2025-05-13 12:18:38,829 - services.storage_service - INFO - Saved collection with 3 rules

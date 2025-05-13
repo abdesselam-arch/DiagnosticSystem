@@ -2,8 +2,8 @@
   "collection_id": "c495bc08-4776-4d96-9267-d8f828e72b98",
   "name": "Diagnostic Collection",
   "description": "",
-  "created_date": "2025-05-13T12:18:38.824784",
-  "last_modified_date": "2025-05-13T12:18:38.824784",
+  "created_date": "2025-05-13T11:07:36.595113",
+  "last_modified_date": "2025-05-13T11:07:36.595113",
   "rules": {
     "ba143655-7a4b-483f-a08b-b2095c8049d4": {
       "rule_id": "ba143655-7a4b-483f-a08b-b2095c8049d4",
@@ -47,8 +47,8 @@
       ],
       "created_date": "2025-05-13T10:58:38.954522",
       "last_modified_date": "2025-05-13T10:58:38.954522",
-      "last_used": "2025-05-13T12:18:15.186889",
-      "use_count": 4,
+      "last_used": "2025-05-13T11:07:36.584112",
+      "use_count": 3,
       "metadata": {
         "effectiveness": "Complete Solution",
         "severity": "High",
@@ -117,8 +117,8 @@
       ],
       "created_date": "2025-05-13T11:02:44.965496",
       "last_modified_date": "2025-05-13T11:02:44.965496",
-      "last_used": "2025-05-13T12:18:38.811872",
-      "use_count": 3,
+      "last_used": "2025-05-13T11:07:33.414508",
+      "use_count": 1,
       "metadata": {},
       "pathway_data": {
         "nodes": {
@@ -225,50 +225,6 @@
           ]
         ]
       }
-    },
-    "66b8f2e6-0076-40bc-a850-efa55ae7d7f4": {
-      "rule_id": "66b8f2e6-0076-40bc-a850-efa55ae7d7f4",
-      "text": "IF Weight < tolerance Weight < tolerance,\nTHEN\n  1. Adjust ff to 2\n  2. Replace die",
-      "name": "",
-      "description": "",
-      "is_complex": true,
-      "conditions": [
-        {
-          "param": "Weight",
-          "operator": "<",
-          "value": "tolerance",
-          "connector": "AND"
-        },
-        {
-          "param": "Weight",
-          "operator": "<",
-          "value": "tolerance",
-          "connector": "AND"
-        }
-      ],
-      "actions": [
-        {
-          "type": "Adjust",
-          "target": "ff",
-          "value": "2",
-          "sequence": 1
-        },
-        {
-          "type": "Replace",
-          "target": "die",
-          "value": "",
-          "sequence": 2
-        }
-      ],
-      "created_date": "2025-05-13T12:14:44.854204",
-      "last_modified_date": "2025-05-13T12:14:44.854204",
-      "last_used": "2025-05-13T12:18:19.192397",
-      "use_count": 1,
-      "metadata": {
-        "name": "Weight fix",
-        "creation_date": "2025-05-13T12:14:44.854204"
-      },
-      "pathway_data": null
     }
   }
 }

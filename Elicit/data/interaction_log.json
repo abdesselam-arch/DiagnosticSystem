@@ -33,5 +33,33 @@
     "rule_text": "IF problem is 'Quality Issue: QC is out of tolerance limits' AND Powder fill shows Powder fill is high AND UL position shows UL is too low,\nTHEN\n  1. change powder fill from 0.5 to 0.6\n  2. change UL position",
     "problem_description": "",
     "rule_type": "Capture"
+  },
+  {
+    "timestamp": "2025-05-13T12:18:15.186889",
+    "rule_id": 0,
+    "rule_text": "IF problem is 'Quality Issue: QC is out of tolerance limits' AND Powder fill shows Powder fill is high AND UL position shows UL is too low,\nTHEN\n  1. change powder fill from 0.5 to 0.6\n  2. change UL position",
+    "problem_description": "",
+    "rule_type": "Capture"
+  },
+  {
+    "timestamp": "2025-05-13T12:18:19.192397",
+    "rule_id": 2,
+    "rule_text": "IF Weight < tolerance Weight < tolerance,\nTHEN\n  1. Adjust ff to 2\n  2. Replace die",
+    "problem_description": "",
+    "rule_type": "Rule"
+  },
+  {
+    "timestamp": "2025-05-13T12:18:20.820070",
+    "rule_id": 1,
+    "rule_text": "IF Critical condition: F AND Visual Inspection shows 'E' AND problem is 'A' AND Visual Inspection shows 'B' AND Critical condition: C,\nTHEN\n  1. Investigation: G\n  2. Immediate Fix: D\n  3. Immediate Fix: H",
+    "problem_description": "",
+    "rule_type": "Pathway"
+  },
+  {
+    "timestamp": "2025-05-13T12:18:38.811872",
+    "rule_id": 1,
+    "rule_text": "IF Critical condition: F AND Visual Inspection shows 'E' AND problem is 'A' AND Visual Inspection shows 'B' AND Critical condition: C,\nTHEN\n  1. Investigation: G\n  2. Immediate Fix: D\n  3. Immediate Fix: H",
+    "problem_description": "",
+    "rule_type": "Pathway"
   }
 ]
