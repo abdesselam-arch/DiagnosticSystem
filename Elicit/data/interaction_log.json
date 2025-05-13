@@ -5,5 +5,33 @@
     "rule_text": "IF problem is 'QC1 is high' AND Measurement shows 'powder fill' AND Critical condition: Powder fill is low,\nTHEN\n  1. Adjustment: A\n  2. Adjustment: B",
     "problem_description": "Weight too low",
     "rule_type": "Pathway"
+  },
+  {
+    "timestamp": "2025-05-13T11:01:05.644275",
+    "rule_id": 0,
+    "rule_text": "IF problem is 'Quality Issue: QC is out of tolerance limits' AND Powder fill shows Powder fill is high AND UL position shows UL is too low,\nTHEN\n  1. change powder fill from 0.5 to 0.6\n  2. change UL position",
+    "problem_description": "",
+    "rule_type": "Capture"
+  },
+  {
+    "timestamp": "2025-05-13T11:07:24.718458",
+    "rule_id": 0,
+    "rule_text": "IF problem is 'Quality Issue: QC is out of tolerance limits' AND Powder fill shows Powder fill is high AND UL position shows UL is too low,\nTHEN\n  1. change powder fill from 0.5 to 0.6\n  2. change UL position",
+    "problem_description": "",
+    "rule_type": "Capture"
+  },
+  {
+    "timestamp": "2025-05-13T11:07:33.414508",
+    "rule_id": 1,
+    "rule_text": "IF Critical condition: F AND Visual Inspection shows 'E' AND problem is 'A' AND Visual Inspection shows 'B' AND Critical condition: C,\nTHEN\n  1. Investigation: G\n  2. Immediate Fix: D\n  3. Immediate Fix: H",
+    "problem_description": "",
+    "rule_type": "Pathway"
+  },
+  {
+    "timestamp": "2025-05-13T11:07:36.584112",
+    "rule_id": 0,
+    "rule_text": "IF problem is 'Quality Issue: QC is out of tolerance limits' AND Powder fill shows Powder fill is high AND UL position shows UL is too low,\nTHEN\n  1. change powder fill from 0.5 to 0.6\n  2. change UL position",
+    "problem_description": "",
+    "rule_type": "Capture"
   }
 ]

@@ -2,8 +2,8 @@
   "collection_id": "c495bc08-4776-4d96-9267-d8f828e72b98",
   "name": "Diagnostic Collection",
   "description": "",
-  "created_date": "2025-05-13T11:07:36.595113",
-  "last_modified_date": "2025-05-13T11:07:36.595113",
+  "created_date": "2025-05-13T11:02:44.965496",
+  "last_modified_date": "2025-05-13T11:02:44.965496",
   "rules": {
     "ba143655-7a4b-483f-a08b-b2095c8049d4": {
       "rule_id": "ba143655-7a4b-483f-a08b-b2095c8049d4",
@@ -47,8 +47,8 @@
       ],
       "created_date": "2025-05-13T10:58:38.954522",
       "last_modified_date": "2025-05-13T10:58:38.954522",
-      "last_used": "2025-05-13T11:07:36.584112",
-      "use_count": 3,
+      "last_used": "2025-05-13T11:01:05.644275",
+      "use_count": 1,
       "metadata": {
         "effectiveness": "Complete Solution",
         "severity": "High",
@@ -117,8 +117,8 @@
       ],
       "created_date": "2025-05-13T11:02:44.965496",
       "last_modified_date": "2025-05-13T11:02:44.965496",
-      "last_used": "2025-05-13T11:07:33.414508",
-      "use_count": 1,
+      "last_used": null,
+      "use_count": 0,
       "metadata": {},
       "pathway_data": {
         "nodes": {

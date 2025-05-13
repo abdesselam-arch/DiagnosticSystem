@@ -70,7 +70,7 @@ class RuleNodeItem(QGraphicsRectItem):
             # Default style
             self.setBrush(QBrush(QColor(240, 240, 240)))
             self.setPen(QPen(QColor(60, 60, 60), 1))
-        
+
         # Set rounded corners
         self.setFlags(QGraphicsItem.ItemIsSelectable)
         
@@ -95,7 +95,9 @@ class RuleNodeItem(QGraphicsRectItem):
             self.header_item.setBrush(QBrush(QColor(200, 120, 40)))
         else:
             self.header_item.setBrush(QBrush(QColor(120, 120, 120)))
-        self.header_item.setPen(Qt.NoPen)
+        
+        # Fix: Create a QPen with NoPen style
+        self.header_item.setPen(QPen(Qt.PenStyle.NoPen))
         
         # Add header text
         self.header_text = QGraphicsTextItem(self)
