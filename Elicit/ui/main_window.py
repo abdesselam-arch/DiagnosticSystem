@@ -57,25 +57,29 @@ class MainWindow(QMainWindow):
         left_layout = QVBoxLayout(self.left_panel)
         
         # Problem description
-        self.label = QLabel("Describe diagnostic situation:")
-        left_layout.addWidget(self.label)
+        #self.label = QLabel("Describe diagnostic situation:")
+        #left_layout.addWidget(self.label)
         
-        self.problem_input = QTextEdit()
-        left_layout.addWidget(self.problem_input)
+        #self.problem_input = QTextEdit()
+        #left_layout.addWidget(self.problem_input)
         
         # Search box for existing diagnostics
-        search_layout = QHBoxLayout()
-        self.search_label = QLabel("Search diagnostics:")
-        search_layout.addWidget(self.search_label)
-        
+        # Group box for search
+        search_group = QGroupBox("Search Diagnostics")
+        search_layout = QVBoxLayout()
+
         self.search_input = QLineEdit()
         self.search_input.setPlaceholderText("Enter keywords to search...")
+        self.search_input.setFixedHeight(30)
         search_layout.addWidget(self.search_input)
-        
+
         self.search_button = QPushButton("Search")
+        self.search_button.setFixedHeight(35)
         search_layout.addWidget(self.search_button)
-        
-        left_layout.addLayout(search_layout)
+
+        search_group.setLayout(search_layout)
+        search_group.setMinimumHeight(150)  # Adjust to match "Recent Activities"
+        left_layout.addWidget(search_group)
         
         # Capture buttons
         capture_group = QGroupBox("Capture Diagnostic Knowledge")
