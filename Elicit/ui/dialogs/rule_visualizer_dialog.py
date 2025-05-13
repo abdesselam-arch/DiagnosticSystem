@@ -80,10 +80,19 @@ class RuleNodeItem(QGraphicsRectItem):
         self.text_item.setTextWidth(width - 20)
         
         # Center text
-        text_width = self.text_item.boundingRect().width()
+        '''text_width = self.text_item.boundingRect().width()
         text_height = self.text_item.boundingRect().height()
-        self.text_item.setPos((width - text_width) / 2, (height - text_height) / 2)
-        
+        #self.text_item.setPos((width - text_width) / 2, (height - text_height) / 2)
+        self.text_item.setPos((width - text_width) / 2, 25 + (height - 25 - text_height) / 2)'''
+        # Set a fixed text width and update the layout
+        self.text_item.setTextWidth(width - 20)
+        document = self.text_item.document()
+        text_height = document.size().height()
+        self.text_item.setPos(
+            10,  # Horizontal padding
+            25 + ((height - 25 - text_height) / 2)  # Vertically center in remaining area
+        )
+
         # Set text color
         self.text_item.setDefaultTextColor(QColor(30, 30, 30))
         
@@ -239,7 +248,7 @@ class RuleVisualizerDialog(QDialog):
         
         flow_layout.addLayout(zoom_layout)
         
-        self.tab_widget.addTab(flow_tab, "Flow Chart")
+        #self.tab_widget.addTab(flow_tab, "Flow Chart")
         
         main_layout.addWidget(self.tab_widget)
         
