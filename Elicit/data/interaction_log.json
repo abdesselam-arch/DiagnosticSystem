@@ -1,0 +1,9 @@
+[
+  {
+    "timestamp": "2025-05-13T10:33:49.392049",
+    "rule_id": 1,
+    "rule_text": "IF problem is 'QC1 is high' AND Measurement shows 'powder fill' AND Critical condition: Powder fill is low,\nTHEN\n  1. Adjustment: A\n  2. Adjustment: B",
+    "problem_description": "Weight too low",
+    "rule_type": "Pathway"
+  }
+]

@@ -1,0 +1,18 @@
+2025-05-13 10:21:42,919 - __main__ - INFO - Environment setup complete
+2025-05-13 10:21:42,921 - __main__ - ERROR - Error starting application: No module named 'ui'
+Traceback (most recent call last):
+  File "c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\app\main.py", line 55, in main
+    from ui.main_window import MainWindow
+ModuleNotFoundError: No module named 'ui'
+2025-05-13 10:23:41,963 - __main__ - INFO - Environment setup complete
+2025-05-13 10:23:42,335 - services.storage_service - WARNING - Rules file exists but couldn't be loaded. Creating new collection.
+2025-05-13 10:23:42,335 - services.storage_service - INFO - Loaded collection with 0 rules
+2025-05-13 10:23:42,335 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-13 10:23:42,824 - ui.main_window - INFO - Main window initialized
+2025-05-13 10:23:42,970 - __main__ - INFO - Application started successfully
+2025-05-13 10:26:08,415 - services.storage_service - INFO - Created backup at C:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_102608.json
+2025-05-13 10:26:08,416 - services.storage_service - INFO - Saved collection with 1 rules
+2025-05-13 10:30:34,527 - services.storage_service - INFO - Created backup at C:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_103034.json
+2025-05-13 10:30:34,530 - services.storage_service - INFO - Saved collection with 2 rules
+2025-05-13 10:33:49,394 - services.storage_service - INFO - Created backup at C:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_103349.json
+2025-05-13 10:33:49,396 - services.storage_service - INFO - Saved collection with 2 rules

@@ -1,0 +1,36 @@
+diagnostic_system/
+│
+├── app/
+│   ├── main.py                 # Application entry point
+│   └── config.py               # Configuration settings
+│
+├── ui/
+│   ├── main_window.py          # Main application window
+│   ├── dialogs/
+│   │   ├── pathway_dialog.py            # Diagnostic pathway builder dialog
+│   │   ├── quick_capture_dialog.py      # Quick capture interface
+│   │   ├── rule_editor_dialog.py        # Rule editing dialog
+│   │   └── rule_visualizer_dialog.py    # Rule visualization dialog
+│   │
+│   └── widgets/
+│       ├── diagnostic_node.py           # Node widget for pathways
+│       ├── diagnostic_canvas.py         # Canvas for pathway building
+│       ├── rule_table.py                # Table for displaying rules
+│       └── search_panel.py              # Panel for searching rules
+│
+├── models/
+│   ├── rule.py                 # Rule data model
+│   ├── diagnostic_node.py      # Node data model
+│   ├── diagnostic_pathway.py   # Pathway data model
+│   └── collection.py           # Collection of rules/pathways
+│
+├── services/
+│   ├── storage_service.py      # Persistence of rules and pathways
+│   ├── export_service.py       # Import/export functionality
+│   ├── search_service.py       # Simple search for rules (replacing TOPSIS)
+│   └── analytics_service.py    # Basic analytics on collected data
+│
+└── utils/
+    ├── file_utils.py           # File I/O helpers
+    ├── conversion_utils.py     # Format conversion utilities
+    └── logging_utils.py        # Logging facility

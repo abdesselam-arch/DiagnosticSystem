@@ -1,0 +1,6 @@
+2025-05-13 10:21:07,656 - __main__ - INFO - Environment setup complete
+2025-05-13 10:21:07,657 - __main__ - ERROR - Error starting application: No module named 'ui'
+Traceback (most recent call last):
+  File "c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\app\main.py", line 55, in main
+    from ui.main_window import MainWindow
+ModuleNotFoundError: No module named 'ui'

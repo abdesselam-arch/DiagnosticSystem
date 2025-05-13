@@ -1,0 +1,172 @@
+{
+  "collection_id": "c495bc08-4776-4d96-9267-d8f828e72b98",
+  "name": "Diagnostic Collection",
+  "description": "",
+  "created_date": "2025-05-13T10:33:49.393477",
+  "last_modified_date": "2025-05-13T10:33:49.393477",
+  "rules": {
+    "ec1f7ccf-0e08-4aef-a8a1-a23c20ea66e8": {
+      "rule_id": "ec1f7ccf-0e08-4aef-a8a1-a23c20ea66e8",
+      "text": "IF problem is 'Quality Issue: weight too low' AND i checked the powder fill shows powder fill low AND powder density,\nTHEN\n  1. action A\n  2. action B",
+      "name": "",
+      "description": "",
+      "is_complex": true,
+      "conditions": [
+        {
+          "param": "problem is 'Quality Issue: weight too low'",
+          "operator": "=",
+          "value": "true",
+          "connector": "AND"
+        },
+        {
+          "param": "i checked the powder fill shows powder fill low",
+          "operator": "=",
+          "value": "true",
+          "connector": "AND"
+        },
+        {
+          "param": "powder density",
+          "operator": "=",
+          "value": "true",
+          "connector": ""
+        }
+      ],
+      "actions": [
+        {
+          "type": "Apply",
+          "target": "action A",
+          "value": "",
+          "sequence": 1
+        },
+        {
+          "type": "Apply",
+          "target": "action B",
+          "value": "",
+          "sequence": 2
+        }
+      ],
+      "created_date": "2025-05-13T10:33:49.393477",
+      "last_modified_date": "2025-05-13T10:33:49.393477",
+      "last_used": null,
+      "use_count": 0,
+      "metadata": {
+        "effectiveness": "Complete Solution",
+        "severity": "Medium",
+        "problem_type": "Quality Issue",
+        "capture_date": "2025-05-13T10:26:08.412849"
+      },
+      "pathway_data": null
+    },
+    "5edacc66-fac9-47e8-b919-100f03324a77": {
+      "rule_id": "5edacc66-fac9-47e8-b919-100f03324a77",
+      "text": "IF problem is 'QC1 is high' AND Measurement shows 'powder fill' AND Critical condition: Powder fill is low,\nTHEN\n  1. Adjustment: A\n  2. Adjustment: B",
+      "name": "",
+      "description": "",
+      "is_complex": true,
+      "conditions": [
+        {
+          "param": "problem is 'QC1 is high'",
+          "operator": "=",
+          "value": "true",
+          "connector": "AND"
+        },
+        {
+          "param": "Measurement shows 'powder fill'",
+          "operator": "=",
+          "value": "true",
+          "connector": "AND"
+        },
+        {
+          "param": "Critical condition: Powder fill is low",
+          "operator": "=",
+          "value": "true",
+          "connector": ""
+        }
+      ],
+      "actions": [
+        {
+          "type": "Adjustment",
+          "target": "A",
+          "value": "",
+          "sequence": 1
+        },
+        {
+          "type": "Adjustment",
+          "target": "B",
+          "value": "",
+          "sequence": 2
+        }
+      ],
+      "created_date": "2025-05-13T10:33:49.393477",
+      "last_modified_date": "2025-05-13T10:33:49.393477",
+      "last_used": "2025-05-13T10:33:49.392049",
+      "use_count": 1,
+      "metadata": {},
+      "pathway_data": {
+        "nodes": {
+          "1691491205776": {
+            "node_id": 1691491205776,
+            "node_type": "problem",
+            "content": "QC1 is high",
+            "connections": [
+              1691491207648
+            ]
+          },
+          "1691491207648": {
+            "node_id": 1691491207648,
+            "node_type": "check",
+            "content": "powder fill",
+            "connections": [
+              1691491220752
+            ],
+            "check_type": "Measurement"
+          },
+          "1691491220752": {
+            "node_id": 1691491220752,
+            "node_type": "condition",
+            "content": "Powder fill is low",
+            "connections": [
+              1691491209232,
+              1691491216864
+            ],
+            "severity": "Critical"
+          },
+          "1691491209232": {
+            "node_id": 1691491209232,
+            "node_type": "action",
+            "content": "A",
+            "connections": [],
+            "impact": "Adjustment",
+            "effectiveness": 3
+          },
+          "1691491216864": {
+            "node_id": 1691491216864,
+            "node_type": "action",
+            "content": "B",
+            "connections": [],
+            "impact": "Adjustment",
+            "effectiveness": 3
+          }
+        },
+        "connections": [
+          [
+            1691491205776,
+            1691491207648
+          ],
+          [
+            1691491207648,
+            1691491220752
+          ],
+          [
+            1691491220752,
+            1691491209232
+          ],
+          [
+            1691491220752,
+            1691491216864
+          ]
+        ]
+      }
+    }
+  }
+}
