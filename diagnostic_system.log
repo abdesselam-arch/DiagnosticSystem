@@ -279,3 +279,74 @@ AttributeError: 'MainWindow' object has no attribute 'search_input'
 2025-05-13 18:16:29,018 - services.storage_service - INFO - Created backup at c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_181629.json
 2025-05-13 18:16:29,019 - services.storage_service - INFO - Removed old backup: c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_110736.json
 2025-05-13 18:16:29,021 - services.storage_service - INFO - Saved collection with 5 rules
+2025-05-14 10:03:37,021 - __main__ - INFO - Environment setup complete
+2025-05-14 10:03:37,284 - services.storage_service - INFO - Loaded collection with 5 rules
+2025-05-14 10:03:37,284 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-14 10:03:37,726 - ui.main_window - INFO - Main window initialized
+2025-05-14 10:03:37,911 - __main__ - INFO - Application started successfully
+2025-05-14 11:05:43,780 - __main__ - INFO - Environment setup complete
+2025-05-14 11:05:43,991 - services.storage_service - INFO - Loaded collection with 5 rules
+2025-05-14 11:05:43,992 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-14 11:05:44,380 - ui.main_window - INFO - Main window initialized
+2025-05-14 11:05:44,534 - __main__ - INFO - Application started successfully
+2025-05-14 18:59:34,022 - __main__ - INFO - Environment setup complete
+2025-05-14 18:59:34,555 - services.storage_service - INFO - Loaded collection with 5 rules
+2025-05-14 18:59:34,557 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-14 18:59:35,687 - ui.main_window - INFO - Main window initialized
+2025-05-14 18:59:35,970 - __main__ - INFO - Application started successfully
+2025-05-15 09:11:41,400 - __main__ - INFO - Environment setup complete
+2025-05-15 09:11:41,808 - services.storage_service - INFO - Loaded collection with 5 rules
+2025-05-15 09:11:41,810 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-15 09:11:42,777 - ui.main_window - INFO - Main window initialized
+2025-05-15 09:11:43,066 - __main__ - INFO - Application started successfully
+2025-05-15 09:14:03,517 - services.storage_service - INFO - Created backup at c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250515_091403.json
+2025-05-15 09:14:03,524 - services.storage_service - INFO - Removed old backup: c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_121444.json
+2025-05-15 09:14:03,529 - services.storage_service - INFO - Saved collection with 6 rules
+2025-05-16 09:38:39,735 - __main__ - INFO - Environment setup complete
+2025-05-16 09:38:40,069 - services.storage_service - INFO - Loaded collection with 6 rules
+2025-05-16 09:38:40,069 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-16 09:38:40,674 - ui.main_window - INFO - Main window initialized
+2025-05-16 09:38:40,926 - __main__ - INFO - Application started successfully
+2025-05-16 09:38:52,007 - __main__ - INFO - Environment setup complete
+2025-05-16 09:38:52,257 - services.storage_service - INFO - Loaded collection with 6 rules
+2025-05-16 09:38:52,258 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-16 09:38:52,701 - ui.main_window - INFO - Main window initialized
+2025-05-16 09:38:52,895 - __main__ - INFO - Application started successfully
+2025-05-16 09:40:31,321 - __main__ - INFO - Environment setup complete
+2025-05-16 09:40:31,651 - services.storage_service - INFO - Loaded collection with 6 rules
+2025-05-16 09:40:31,651 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-16 09:40:32,177 - ui.main_window - INFO - Main window initialized
+2025-05-16 09:40:32,441 - __main__ - INFO - Application started successfully
+2025-05-16 09:44:07,091 - __main__ - INFO - Environment setup complete
+2025-05-16 09:44:07,464 - services.storage_service - INFO - Loaded collection with 6 rules
+2025-05-16 09:44:07,464 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-16 09:44:08,036 - ui.main_window - INFO - Main window initialized
+2025-05-16 09:44:08,276 - __main__ - INFO - Application started successfully
+2025-05-16 09:47:20,326 - __main__ - INFO - Environment setup complete
+2025-05-16 09:47:20,680 - services.storage_service - INFO - Loaded collection with 6 rules
+2025-05-16 09:47:20,680 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-16 09:47:21,176 - ui.main_window - INFO - Main window initialized
+2025-05-16 09:47:21,433 - __main__ - INFO - Application started successfully
+2025-05-16 09:49:24,116 - __main__ - INFO - Environment setup complete
+2025-05-16 09:49:24,431 - services.storage_service - INFO - Loaded collection with 6 rules
+2025-05-16 09:49:24,432 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-16 09:49:24,945 - ui.main_window - INFO - Main window initialized
+2025-05-16 09:49:25,175 - __main__ - INFO - Application started successfully
+2025-05-16 09:52:15,822 - services.storage_service - INFO - Created backup at c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250516_095215.json
+2025-05-16 09:52:15,827 - services.storage_service - INFO - Removed old backup: c:\Users\AAbdesselam\OneDrive - Scientific Network South Tyrol\Research & Development\Phase 1- Knowledge Elicitation and Representation\Elicit\data\backups\rules_backup_20250513_121815.json
+2025-05-16 09:52:15,835 - services.storage_service - INFO - Saved collection with 7 rules
+2025-05-16 09:54:46,604 - __main__ - INFO - Environment setup complete
+2025-05-16 09:54:46,946 - services.storage_service - INFO - Loaded collection with 7 rules
+2025-05-16 09:54:46,948 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-16 09:54:47,483 - ui.main_window - INFO - Main window initialized
+2025-05-16 09:54:47,764 - __main__ - INFO - Application started successfully
+2025-05-16 09:58:25,195 - __main__ - INFO - Environment setup complete
+2025-05-16 09:58:25,577 - services.storage_service - INFO - Loaded collection with 7 rules
+2025-05-16 09:58:25,577 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-16 09:58:26,200 - ui.main_window - INFO - Main window initialized
+2025-05-16 09:58:26,429 - __main__ - INFO - Application started successfully
+2025-05-16 10:00:56,212 - __main__ - INFO - Environment setup complete
+2025-05-16 10:00:56,567 - services.storage_service - INFO - Loaded collection with 7 rules
+2025-05-16 10:00:56,567 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-16 10:00:57,065 - ui.main_window - INFO - Main window initialized
+2025-05-16 10:00:57,297 - __main__ - INFO - Application started successfully

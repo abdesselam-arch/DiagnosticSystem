@@ -1,0 +1,5 @@
+2025-05-14 09:16:25,198 - __main__ - INFO - Environment setup complete
+2025-05-14 09:16:25,372 - services.storage_service - INFO - Loaded collection with 5 rules
+2025-05-14 09:16:25,373 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-14 09:16:25,878 - ui.main_window - INFO - Main window initialized
+2025-05-14 09:16:26,027 - __main__ - INFO - Application started successfully

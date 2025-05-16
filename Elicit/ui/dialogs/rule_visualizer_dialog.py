@@ -11,10 +11,10 @@ from PyQt5.QtWidgets import (
     QGroupBox, QTableWidget, QTableWidgetItem, QHeaderView, QTabWidget,
     QWidget, QSplitter, QFrame, QGraphicsView, QGraphicsScene, QGraphicsItem,
     QGraphicsRectItem, QGraphicsTextItem, QGraphicsLineItem, QGraphicsPathItem,
-    QGraphicsEllipseItem, QScrollArea, QStyleOptionGraphicsItem
+    QGraphicsEllipseItem, QScrollArea, QStyleOptionGraphicsItem, QGraphicsSimpleTextItem
 )
 from PyQt5.QtCore import Qt, QRectF, QPointF, QSizeF
-from PyQt5.QtGui import QFont, QColor, QPen, QBrush, QPainterPath, QPainter, QLinearGradient
+from PyQt5.QtGui import QFont, QColor, QPen, QBrush, QPainterPath, QPainter, QLinearGradient, QFontMetrics
 
 logger = logging.getLogger(__name__)
 
@@ -44,8 +44,159 @@ class RuleFlowGraphicsView(QGraphicsView):
             # Zoom out
             self.scale(1.0 / zoom_factor, 1.0 / zoom_factor)
 
+# class RuleNodeItem(QGraphicsRectItem):
+#     """Graphics item for a rule node (condition or action)."""
+
+#     def __init__(self, text, node_type, x, y, width=200, height=100, parent=None):
+#             """Initialize the node item."""
+#             super().__init__(x, y, width, height, parent)
+#             self.text = text
+#             self.node_type = node_type
+            
+#             # Set appearance based on node type
+#             if node_type == "condition":
+#                 gradient = QLinearGradient(0, 0, 0, height)
+#                 gradient.setColorAt(0, QColor(235, 245, 255))
+#                 gradient.setColorAt(1, QColor(180, 210, 240))
+#                 self.setBrush(QBrush(gradient))
+#                 self.setPen(QPen(QColor(60, 120, 200), 2))
+#             elif node_type == "action":
+#                 gradient = QLinearGradient(0, 0, 0, height)
+#                 gradient.setColorAt(0, QColor(255, 245, 230))
+#                 gradient.setColorAt(1, QColor(240, 200, 160))
+#                 self.setBrush(QBrush(gradient))
+#                 self.setPen(QPen(QColor(200, 120, 40), 2))
+#             else:
+#                 # Default style
+#                 self.setBrush(QBrush(QColor(240, 240, 240)))
+#                 self.setPen(QPen(QColor(60, 60, 60), 1))
+
+#             # Set rounded corners
+#             self.setFlags(QGraphicsItem.ItemIsSelectable)
+            
+#             # Add header first (so it's underneath text)
+#             self.header_item = QGraphicsRectItem(0, 0, width, 25, self)
+#             if node_type == "condition":
+#                 self.header_item.setBrush(QBrush(QColor(60, 120, 200)))
+#             elif node_type == "action":
+#                 self.header_item.setBrush(QBrush(QColor(200, 120, 40)))
+#             else:
+#                 self.header_item.setBrush(QBrush(QColor(120, 120, 120)))
+            
+#             # Fix: Create a QPen with NoPen style
+#             self.header_item.setPen(QPen(Qt.PenStyle.NoPen))
+            
+#             # Add header text
+#             self.header_text = QGraphicsTextItem(self)
+#             if node_type == "condition":
+#                 self.header_text.setPlainText("IF CONDITION")
+#             elif node_type == "action":
+#                 self.header_text.setPlainText("THEN ACTION")
+#             else:
+#                 self.header_text.setPlainText("NODE")
+            
+#             self.header_text.setDefaultTextColor(QColor(255, 255, 255))
+#             self.header_text.setFont(QFont("Arial", 8, QFont.Bold))
+#             self.header_text.setPos(10, 5)
+            
+#             # KEY FIX: Create a new QGraphicsTextItem with proper handling
+#             # Remove any previous text items first to avoid stacking
+#             self.text_item = QGraphicsTextItem(self)
+            
+#             # Format text as HTML with explicit styling
+#             formatted_text = f"""
+#             <div style="font-family: Arial; font-size: 9pt; color: black; 
+#                         width: {width-25}px; word-wrap: break-word;">
+#                 {text}
+#             </div>
+#             """
+#             self.text_item.setHtml(formatted_text)
+            
+#             # Ensure text width is constrained
+#             self.text_item.setTextWidth(width - 25)
+            
+#             # Position text below header with fixed offset
+#             self.text_item.setPos(10, 30)
+            
+#             # Ensure content is visible by forcing update
+#             self.text_item.update()
+    
+#     '''def __init__(self, text, node_type, x, y, width=200, height=100, parent=None):
+#         """Initialize the node item."""
+#         super().__init__(x, y, width, height, parent)
+#         self.text = text
+#         self.node_type = node_type
+        
+#         # Set appearance based on node type
+#         if node_type == "condition":
+#             gradient = QLinearGradient(0, 0, 0, height)
+#             gradient.setColorAt(0, QColor(235, 245, 255))
+#             gradient.setColorAt(1, QColor(180, 210, 240))
+#             self.setBrush(QBrush(gradient))
+#             self.setPen(QPen(QColor(60, 120, 200), 2))
+#         elif node_type == "action":
+#             gradient = QLinearGradient(0, 0, 0, height)
+#             gradient.setColorAt(0, QColor(255, 245, 230))
+#             gradient.setColorAt(1, QColor(240, 200, 160))
+#             self.setBrush(QBrush(gradient))
+#             self.setPen(QPen(QColor(200, 120, 40), 2))
+#         else:
+#             # Default style
+#             self.setBrush(QBrush(QColor(240, 240, 240)))
+#             self.setPen(QPen(QColor(60, 60, 60), 1))
+
+#         # Set rounded corners
+#         self.setFlags(QGraphicsItem.ItemIsSelectable)
+        
+#         # Add text
+#         self.text_item = QGraphicsTextItem(self)
+#         self.text_item.setPlainText(text)
+#         self.text_item.setTextWidth(width - 20)
+        
+#         # Center text
+#         text_width = self.text_item.boundingRect().width()
+#         text_height = self.text_item.boundingRect().height()
+#         #self.text_item.setPos((width - text_width) / 2, (height - text_height) / 2)
+#         self.text_item.setPos((width - text_width) / 2, 25 + (height - 25 - text_height) / 2)
+#         # Set a fixed text width and update the layout
+#         self.text_item.setTextWidth(width - 20)
+#         document = self.text_item.document()
+#         text_height = document.size().height()
+#         self.text_item.setPos(
+#             10,  # Horizontal padding
+#             25 + ((height - 25 - text_height) / 2)  # Vertically center in remaining area
+#         )
+
+#         # Set text color
+#         self.text_item.setDefaultTextColor(QColor(30, 30, 30))
+        
+#         # Add header
+#         self.header_item = QGraphicsRectItem(0, 0, width, 25, self)
+#         if node_type == "condition":
+#             self.header_item.setBrush(QBrush(QColor(60, 120, 200)))
+#         elif node_type == "action":
+#             self.header_item.setBrush(QBrush(QColor(200, 120, 40)))
+#         else:
+#             self.header_item.setBrush(QBrush(QColor(120, 120, 120)))
+        
+#         # Fix: Create a QPen with NoPen style
+#         self.header_item.setPen(QPen(Qt.PenStyle.NoPen))
+        
+#         # Add header text
+#         self.header_text = QGraphicsTextItem(self)
+#         if node_type == "condition":
+#             self.header_text.setPlainText("IF CONDITION")
+#         elif node_type == "action":
+#             self.header_text.setPlainText("THEN ACTION")
+#         else:
+#             self.header_text.setPlainText("NODE")
+        
+#         self.header_text.setDefaultTextColor(QColor(255, 255, 255))
+#         self.header_text.setFont(QFont("Arial", 8, QFont.Bold))
+#         self.header_text.setPos(10, 5)'''
+
 class RuleNodeItem(QGraphicsRectItem):
-    """Graphics item for a rule node (condition or action)."""
+    # Graphics item for a rule node (condition or action).
     
     def __init__(self, text, node_type, x, y, width=200, height=100, parent=None):
         """Initialize the node item."""
@@ -71,32 +222,10 @@ class RuleNodeItem(QGraphicsRectItem):
             self.setBrush(QBrush(QColor(240, 240, 240)))
             self.setPen(QPen(QColor(60, 60, 60), 1))
 
-        # Set rounded corners
+        # Set flags
         self.setFlags(QGraphicsItem.ItemIsSelectable)
         
-        # Add text
-        self.text_item = QGraphicsTextItem(self)
-        self.text_item.setPlainText(text)
-        self.text_item.setTextWidth(width - 20)
-        
-        # Center text
-        '''text_width = self.text_item.boundingRect().width()
-        text_height = self.text_item.boundingRect().height()
-        #self.text_item.setPos((width - text_width) / 2, (height - text_height) / 2)
-        self.text_item.setPos((width - text_width) / 2, 25 + (height - 25 - text_height) / 2)'''
-        # Set a fixed text width and update the layout
-        self.text_item.setTextWidth(width - 20)
-        document = self.text_item.document()
-        text_height = document.size().height()
-        self.text_item.setPos(
-            10,  # Horizontal padding
-            25 + ((height - 25 - text_height) / 2)  # Vertically center in remaining area
-        )
-
-        # Set text color
-        self.text_item.setDefaultTextColor(QColor(30, 30, 30))
-        
-        # Add header
+        # Add header rect
         self.header_item = QGraphicsRectItem(0, 0, width, 25, self)
         if node_type == "condition":
             self.header_item.setBrush(QBrush(QColor(60, 120, 200)))
@@ -105,21 +234,69 @@ class RuleNodeItem(QGraphicsRectItem):
         else:
             self.header_item.setBrush(QBrush(QColor(120, 120, 120)))
         
-        # Fix: Create a QPen with NoPen style
         self.header_item.setPen(QPen(Qt.PenStyle.NoPen))
         
-        # Add header text
-        self.header_text = QGraphicsTextItem(self)
+        # Add header text as QGraphicsSimpleTextItem for better control
+        header_text = QGraphicsSimpleTextItem(self)
         if node_type == "condition":
-            self.header_text.setPlainText("IF CONDITION")
+            header_text.setText("IF CONDITION")
         elif node_type == "action":
-            self.header_text.setPlainText("THEN ACTION")
+            header_text.setText("THEN ACTION")
         else:
-            self.header_text.setPlainText("NODE")
+            header_text.setText("NODE")
         
-        self.header_text.setDefaultTextColor(QColor(255, 255, 255))
-        self.header_text.setFont(QFont("Arial", 8, QFont.Bold))
-        self.header_text.setPos(10, 5)
+        header_text.setBrush(QBrush(QColor(255, 255, 255)))
+        header_text.setFont(QFont("Arial", 8, QFont.Bold))
+        
+        # Center header text
+        header_bounds = header_text.boundingRect()
+        header_x = (width - header_bounds.width()) / 2
+        header_text.setPos(header_x, 5)
+        
+        # *** KEY FIX: Manual text rendering with proper wrapping ***
+        # Break text into words and manually format them
+        self.render_wrapped_text(text, width-20, 30)
+    
+    def render_wrapped_text(self, text, max_width, start_y):
+        """Manually render text with proper word wrapping."""
+        font = QFont("Arial", 9)
+        font_metrics = QFontMetrics(font)
+        words = text.split()
+        
+        current_line = ""
+        y_position = start_y
+        
+        for word in words:
+            # Check if adding this word would exceed max width
+            test_line = current_line + " " + word if current_line else word
+            line_width = font_metrics.horizontalAdvance(test_line)
+            
+            if line_width <= max_width:
+                # Add word to current line
+                current_line = test_line
+            else:
+                # Line would be too long, render current line and start new line
+                if current_line:
+                    self._add_text_line(current_line, font, 10, y_position)
+                    y_position += font_metrics.height() + 2  # Line spacing
+                    current_line = word
+                else:
+                    # If a single word is too long, render it anyway
+                    self._add_text_line(word, font, 10, y_position)
+                    y_position += font_metrics.height() + 2
+                    current_line = ""
+        
+        # Render the last line if there is one
+        if current_line:
+            self._add_text_line(current_line, font, 10, y_position)
+    
+    def _add_text_line(self, line, font, x, y):
+        """Add a single line of text to the node."""
+        text_item = QGraphicsSimpleTextItem(self)
+        text_item.setText(line)
+        text_item.setFont(font)
+        text_item.setBrush(QBrush(QColor(30, 30, 30)))  # Dark gray text
+        text_item.setPos(x, y)
 
 class RuleVisualizerDialog(QDialog):
     """Dialog for visualizing diagnostic rules."""
@@ -248,7 +425,7 @@ class RuleVisualizerDialog(QDialog):
         
         flow_layout.addLayout(zoom_layout)
         
-        #self.tab_widget.addTab(flow_tab, "Flow Chart")
+        self.tab_widget.addTab(flow_tab, "Flow Chart")
         
         main_layout.addWidget(self.tab_widget)
         

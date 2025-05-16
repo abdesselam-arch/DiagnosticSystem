@@ -8,7 +8,7 @@ such as a problem, check, condition, or action node.
 import logging
 from PyQt5.QtWidgets import (
     QFrame, QVBoxLayout, QHBoxLayout, QLabel, QTextEdit, QComboBox, 
-    QSlider, QLineEdit, QMenuBar, QMenu, QAction, QSizePolicy
+    QSlider, QLineEdit, QMenuBar, QMenu, QAction, QSizePolicy, QApplication
 )
 from PyQt5.QtCore import Qt, QSize, QPoint, pyqtSignal
 from PyQt5.QtGui import QIcon, QFont, QPainter, QPen, QColor, QDrag, QPixmap, QCursor
@@ -31,8 +31,9 @@ class DiagnosticNodeWidget(QFrame):
         """
         super().__init__(parent)
         self.node_type = node_type
-        self.node_id = node_id if node_id is not None else id(self)  # Unique identifier
-        self.connections = []  # List of connected node IDs
+        self.node_id = node_id if node_id is not None else id(self)
+        self.setAcceptDrops(True)  # Enable drop events
+        self.connections = []
         self.init_ui()
         
     def init_ui(self):
@@ -148,7 +149,8 @@ class DiagnosticNodeWidget(QFrame):
     def mousePressEvent(self, event):
         """Handle mouse press events to initiate drag operations."""
         if event.button() == Qt.LeftButton:
-            self.drag_start_position = event.pos()
+            # Store the global position for accurate dragging
+            self.drag_start_position = event.globalPos() - self.pos()
         super().mousePressEvent(event)
             
     def mouseMoveEvent(self, event):
@@ -156,27 +158,35 @@ class DiagnosticNodeWidget(QFrame):
         if not (event.buttons() & Qt.LeftButton):
             return
             
+        if not hasattr(self, 'drag_start_position'):
+            return
+            
         # Check if the mouse has moved far enough to be a drag
-        if (event.pos() - self.drag_start_position).manhattanLength() < QApplication.startDragDistance():
+        distance = (event.pos() - self.drag_start_position).manhattanLength()
+        if distance < QApplication.startDragDistance():
             return
             
         # Start drag operation
         drag = QDrag(self)
         
-        # Create mime data via parent canvas method
+        # Create a simple mime data if parent method not available
         if self.parent() and hasattr(self.parent(), 'create_mime_data'):
             mime_data = self.parent().create_mime_data(self)
-            if mime_data:
-                drag.setMimeData(mime_data)
-                
-                # Create drag pixmap
-                pixmap = QPixmap(self.size())
-                self.render(pixmap)
-                drag.setPixmap(pixmap)
-                drag.setHotSpot(event.pos())
-                
-                # Execute drag operation
-                drag.exec_(Qt.MoveAction)
+        else:
+            from PyQt5.QtCore import QMimeData
+            mime_data = QMimeData()
+            mime_data.setText(str(self.node_id))
+        
+        drag.setMimeData(mime_data)
+        
+        # Create drag pixmap
+        pixmap = QPixmap(self.size())
+        self.render(pixmap)
+        drag.setPixmap(pixmap)
+        drag.setHotSpot(event.pos())
+        
+        # Execute drag operation
+        drag.exec_(Qt.MoveAction)
     
     def set_content(self, content):
         """Set the content text for this node.

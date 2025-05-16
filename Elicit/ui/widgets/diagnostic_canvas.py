@@ -749,6 +749,40 @@ class DiagnosticPathwayCanvas(QScrollArea):
         self.viewport().update()
         self.pathway_updated.emit()
     
+    def dragEnterEvent(self, event):
+        """Handle drag enter events for node repositioning."""
+        if event.mimeData().hasText():
+            event.acceptProposedAction()
+
+    def dragMoveEvent(self, event):
+        """Handle drag move events."""
+        if event.mimeData().hasText():
+            event.acceptProposedAction()
+
+    def dropEvent(self, event):
+        """Handle drop events for node repositioning."""
+        if event.mimeData().hasText():
+            node_id = int(event.mimeData().text())
+            if node_id in self.nodes:
+                # Get the node widget
+                node = self.nodes[node_id]
+                
+                # Calculate new position relative to the canvas
+                new_pos = event.pos()
+                
+                # Adjust position for scroll offset
+                new_pos += QPoint(self.horizontalScrollBar().value(), 
+                                self.verticalScrollBar().value())
+                
+                # Move the node to the new position
+                node.move(new_pos)
+                
+                event.acceptProposedAction()
+                
+                # Trigger update
+                self.viewport().update()
+                self.pathway_updated.emit()
+        
     def clear(self):
         """Clear all nodes and connections from the canvas."""
         # Remove all nodes
