@@ -132,7 +132,7 @@ class MainWindow(QMainWindow):
         self.right_panel.setFrameShape(QFrame.StyledPanel)
         right_layout = QVBoxLayout(self.right_panel)
         
-        self.rules_label = QLabel("Diagnostic Knowledge Base:")
+        self.rules_label = QLabel("Knowledge Base:")
         self.rules_label.setFont(QFont("Arial", 12, QFont.Bold))
         right_layout.addWidget(self.rules_label)
         

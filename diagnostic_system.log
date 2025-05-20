@@ -350,3 +350,23 @@ AttributeError: 'MainWindow' object has no attribute 'search_input'
 2025-05-16 10:00:56,567 - services.storage_service - INFO - Storage service initialized successfully
 2025-05-16 10:00:57,065 - ui.main_window - INFO - Main window initialized
 2025-05-16 10:00:57,297 - __main__ - INFO - Application started successfully
+2025-05-19 19:13:51,422 - __main__ - INFO - Environment setup complete
+2025-05-19 19:13:51,741 - services.storage_service - INFO - Loaded collection with 7 rules
+2025-05-19 19:13:51,743 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-19 19:13:52,445 - ui.main_window - INFO - Main window initialized
+2025-05-19 19:13:52,673 - __main__ - INFO - Application started successfully
+2025-05-19 21:15:48,866 - __main__ - INFO - Environment setup complete
+2025-05-19 21:15:49,154 - services.storage_service - INFO - Loaded collection with 7 rules
+2025-05-19 21:15:49,155 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-19 21:15:49,652 - ui.main_window - INFO - Main window initialized
+2025-05-19 21:15:49,865 - __main__ - INFO - Application started successfully
+2025-05-19 21:17:20,248 - __main__ - INFO - Environment setup complete
+2025-05-19 21:17:20,565 - services.storage_service - INFO - Loaded collection with 7 rules
+2025-05-19 21:17:20,565 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-19 21:17:21,079 - ui.main_window - INFO - Main window initialized
+2025-05-19 21:17:21,302 - __main__ - INFO - Application started successfully
+2025-05-20 09:43:01,537 - __main__ - INFO - Environment setup complete
+2025-05-20 09:43:02,085 - services.storage_service - INFO - Loaded collection with 7 rules
+2025-05-20 09:43:02,089 - services.storage_service - INFO - Storage service initialized successfully
+2025-05-20 09:43:03,046 - ui.main_window - INFO - Main window initialized
+2025-05-20 09:43:03,293 - __main__ - INFO - Application started successfully
